@@ -1,0 +1,125 @@
+Started by GitHub push by fuzzysearch404
+Obtained Jenkinsfile from git https://github.com/fuzzysearch404/DevOpsHomeWorkThing
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/DevOps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (SCM Checkout)
+[Pipeline] git
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/fuzzysearch404/DevOpsHomeWorkThing/ # timeout=10
+Fetching upstream changes from https://github.com/fuzzysearch404/DevOpsHomeWorkThing/
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/fuzzysearch404/DevOpsHomeWorkThing/ +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 534963fa51585486e222c166972a4b16d64baec5 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 534963fa51585486e222c166972a4b16d64baec5
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master 534963fa51585486e222c166972a4b16d64baec5
+Commit message: "Actually run the app"
+ > git rev-list --no-walk 56a0d94e5a90325d1479ee2cbe0e2c2e9e93f70f # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Maven install)
+[Pipeline] sh
++ mvn install
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------------< [0;36mNone:DevOpsHW[0;1m >----------------------------[m
+[[1;34mINFO[m] [1mBuilding DevOpsHW 1.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDevOpsHW[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/DevOps/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mDevOpsHW[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 4 source files to /var/lib/jenkins/workspace/DevOps/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDevOpsHW[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/DevOps/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mDevOpsHW[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 1 source file to /var/lib/jenkins/workspace/DevOps/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDevOpsHW[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /var/lib/jenkins/workspace/DevOps/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running main.Tests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.276 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mDevOpsHW[0;1m ---[m
+[[1;34mINFO[m] Building jar: /var/lib/jenkins/workspace/DevOps/target/DevOpsHW-1.0.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36mDevOpsHW[0;1m ---[m
+[[1;34mINFO[m] Installing /var/lib/jenkins/workspace/DevOps/target/DevOpsHW-1.0.jar to /var/lib/jenkins/.m2/repository/None/DevOpsHW/1.0/DevOpsHW-1.0.jar
+[[1;34mINFO[m] Installing /var/lib/jenkins/workspace/DevOps/pom.xml to /var/lib/jenkins/.m2/repository/None/DevOpsHW/1.0/DevOpsHW-1.0.pom
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  9.358 s
+[[1;34mINFO[m] Finished at: 2019-10-10T21:47:12+03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run App)
+[Pipeline] sh
++ cd /var/lib/jenkins/workspace/DevOps/target
++ java -cp DevOpsHW-1.0.jar main.Main
+Welcome to the Arena. The match is starting shortly
+Today we have our 2 fighters:
+Pet Reksis with smelly fish (Power: 70)
+Pet Noname with neighbour's dog (Power: 88)
+-----
+3, 2, 1! FIGHT!
+Reksis lost 19 hp as Noname attacked with neighbour's dog
+Noname lost 19 hp as Reksis attacked with smelly fish
+Reksis lost 0 hp as Noname attacked with neighbour's dog
+Noname lost 15 hp as Reksis attacked with smelly fish
+Reksis lost 9 hp as Noname attacked with neighbour's dog
+Noname lost 10 hp as Reksis attacked with smelly fish
+Reksis lost 1 hp as Noname attacked with neighbour's dog
+Noname lost 11 hp as Reksis attacked with smelly fish
+Reksis lost 15 hp as Noname attacked with neighbour's dog
+Noname lost 2 hp as Reksis attacked with smelly fish
+Reksis lost 19 hp as Noname attacked with neighbour's dog
+Noname lost 12 hp as Reksis attacked with smelly fish
+Reksis lost 5 hp as Noname attacked with neighbour's dog
+Noname lost 10 hp as Reksis attacked with smelly fish
+Reksis lost 9 hp as Noname attacked with neighbour's dog
+Noname lost 12 hp as Reksis attacked with smelly fish
+Here are the results:
+IT'S A DRAW!!!!!!!!1!
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
