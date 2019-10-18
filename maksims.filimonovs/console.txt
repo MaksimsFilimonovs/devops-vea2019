@@ -1,0 +1,40 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/MainProject
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MaksimsFilimonovs/DevOps # timeout=10
+Fetching upstream changes from https://github.com/MaksimsFilimonovs/DevOps
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/MaksimsFilimonovs/DevOps +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 9a0d11f3112c9c75da9a792a85704b402f546ea5 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9a0d11f3112c9c75da9a792a85704b402f546ea5
+Commit message: "Used sudo apt-get update"
+ > git rev-list --no-walk 9a0d11f3112c9c75da9a792a85704b402f546ea5 # timeout=10
+[MainProject] $ /bin/sh -xe /tmp/jenkins15204370212725412317.sh
++ cd /home/maksims/Desktop/Workspace/DevOps/src/main/java
++ javac Main.java
++ java Main
+onetwo
+6
+[DevOps] $ ant -file build.xml
+Buildfile: /home/maksims/Desktop/Workspace/DevOps/build.xml
+
+build-subprojects:
+
+init:
+     [copy] Copying 1 file to /home/maksims/Desktop/Workspace/DevOps/target/classes
+
+build-project:
+     [echo] MultiplyConcat: /home/maksims/Desktop/Workspace/DevOps/build.xml
+
+build:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Recording test results
+Finished: SUCCESS
