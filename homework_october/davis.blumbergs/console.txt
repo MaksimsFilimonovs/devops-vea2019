@@ -1,0 +1,225 @@
+Started by user Vingardium Leviosa
+Obtained Jenkinsfile from git https://github.com/davisblumbergs/test-repo
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/pipeline-jenkins-example
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 9c9f11ba-7dd0-4c4c-9f3b-21572e14a1f6
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/davisblumbergs/test-repo # timeout=10
+Fetching upstream changes from https://github.com/davisblumbergs/test-repo
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/davisblumbergs/test-repo +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 9596c13d4151e8b5841389287514b9a68d3f9133 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9596c13d4151e8b5841389287514b9a68d3f9133 # timeout=10
+Commit message: "yee"
+ > git rev-list --no-walk 9596c13d4151e8b5841389287514b9a68d3f9133 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Compile Stage)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mvn clean compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jenkins-example 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jenkins-example ---
+[INFO] Deleting /var/lib/jenkins/workspace/pipeline-jenkins-example/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jenkins-example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/pipeline-jenkins-example/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jenkins-example ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/pipeline-jenkins-example/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.646 s
+[INFO] Finished at: 2019-11-14T10:34:45+02:00
+[INFO] Final Memory: 11M/38M
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Testing Stage)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mvn test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jenkins-example 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jenkins-example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/pipeline-jenkins-example/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jenkins-example ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/pipeline-jenkins-example/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jenkins-example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/pipeline-jenkins-example/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jenkins-example ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/pipeline-jenkins-example/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ jenkins-example ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Nov 14, 2019 10:35:05 AM org.junit.platform.launcher.core.ServiceLoaderTestEngineRegistry loadTestEngines
+INFO: Discovered TestEngines with IDs: [junit-jupiter]
+Running FizzBuzzTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.604 sec - in FizzBuzzTest
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 14.283 s
+[INFO] Finished at: 2019-11-14T10:35:07+02:00
+[INFO] Final Memory: 14M/38M
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deployment Stage)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mvn deploy
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jenkins-example 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jenkins-example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/pipeline-jenkins-example/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jenkins-example ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/pipeline-jenkins-example/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jenkins-example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/pipeline-jenkins-example/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jenkins-example ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/pipeline-jenkins-example/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ jenkins-example ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Nov 14, 2019 10:35:27 AM org.junit.platform.launcher.core.ServiceLoaderTestEngineRegistry loadTestEngines
+INFO: Discovered TestEngines with IDs: [junit-jupiter]
+Running FizzBuzzTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.296 sec - in FizzBuzzTest
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ jenkins-example ---
+[INFO] Building jar: /var/lib/jenkins/workspace/pipeline-jenkins-example/target/jenkins-example-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ jenkins-example ---
+[INFO] Installing /var/lib/jenkins/workspace/pipeline-jenkins-example/target/jenkins-example-1.0-SNAPSHOT.jar to /var/lib/jenkins/.m2/repository/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/jenkins-example-1.0-SNAPSHOT.jar
+[INFO] Installing /var/lib/jenkins/workspace/pipeline-jenkins-example/pom.xml to /var/lib/jenkins/.m2/repository/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/jenkins-example-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ jenkins-example ---
+Downloading: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 782 B
+                   
+Downloaded: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/maven-metadata.xml (782 B at 366 B/s)
+Uploading: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/jenkins-example-1.0-20191114.083533-3.jar
+Progress (1): 2.0/2.5 kB
+Progress (1): 2.5 kB    
+                    
+Uploaded: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/jenkins-example-1.0-20191114.083533-3.jar (2.5 kB at 2.4 kB/s)
+Uploading: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/jenkins-example-1.0-20191114.083533-3.pom
+Progress (1): 2.0/2.5 kB
+Progress (1): 2.5 kB    
+                    
+Uploaded: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/jenkins-example-1.0-20191114.083533-3.pom (2.5 kB at 2.7 kB/s)
+Downloading: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/maven-metadata.xml
+Progress (1): 296 B
+                   
+Downloaded: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/maven-metadata.xml (296 B at 880 B/s)
+Uploading: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 782 B
+                   
+Uploaded: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/1.0-SNAPSHOT/maven-metadata.xml (782 B at 853 B/s)
+Uploading: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/maven-metadata.xml
+Progress (1): 296 B
+                   
+Uploaded: https://mymavenrepo.com/repo/ZZSk5iq0S70NvecudaCm/com/techprimers/testing/jenkins-example/maven-metadata.xml (296 B at 323 B/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 23.719 s
+[INFO] Finished at: 2019-11-14T10:35:37+02:00
+[INFO] Final Memory: 18M/44M
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
