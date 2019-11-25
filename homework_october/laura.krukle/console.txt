@@ -1,0 +1,64 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\jenkins\workspace\job3
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/LauraKrukle/homework.git
+ > git.exe init C:\Program Files (x86)\jenkins\workspace\job3 # timeout=10
+Fetching upstream changes from https://github.com/LauraKrukle/homework.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress -- https://github.com/LauraKrukle/homework.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/LauraKrukle/homework.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/LauraKrukle/homework.git # timeout=10
+Fetching upstream changes from https://github.com/LauraKrukle/homework.git
+ > git.exe fetch --tags --force --progress -- https://github.com/LauraKrukle/homework.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 3964bebb9bea9978eda808741f400a0c52944e71 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 3964bebb9bea9978eda808741f400a0c52944e71 # timeout=10
+Commit message: "Adding DevOps october_homework"
+First time build. Skipping changelog.
+[job3] $ cmd.exe /C "mvn -f homework-junit/pom.xml test && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< laura.krukle:homework-junit >---------------------
+[INFO] Building homework-junit 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ homework-junit ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\jenkins\workspace\job3\homework-junit\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ homework-junit ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ homework-junit ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\jenkins\workspace\job3\homework-junit\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ homework-junit ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Program Files (x86)\jenkins\workspace\job3\homework-junit\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ homework-junit ---
+[INFO] Surefire report directory: C:\Program Files (x86)\jenkins\workspace\job3\homework-junit\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running SimpleTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.156 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.627 s
+[INFO] Finished at: 2019-11-22T23:21:42+02:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
