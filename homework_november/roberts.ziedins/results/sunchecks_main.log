@@ -1,0 +1,11 @@
+Starting audit...
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:1: Missing package-info.java file. [JavadocPackage]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:10:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:12:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:12:9: Missing a Javadoc comment. [MissingJavadocMethod]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:12:33: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:15: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:18: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:20: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Admistrator\Documents\Eclipse-workspace\DevOpsHW\src\main\java\main\Main.java:29: Line has trailing spaces. [RegexpSingleline]
+Audit done.
