@@ -1,0 +1,8 @@
+Resource: DevOpsTest.java
+Description: Replace this use of System.out or System.err by a logger
+Resource: DevOpsTest.java
+Description: Use a logger to log this exception
+Resource: DevOpsTest.java
+Description: Move this file to a named package
+Resource: DevOpsTest.java
+Description: Replace this use of System.out or System.err by a logger
