@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="1" timestamp="1575917912209" analysisTimestamp="1575917860867" release="">
+  <Project projectName="homework">
+    <Jar>C:\Users\MARTA\Desktop\Patterns\homework\target\test-classes</Jar>
+    <Jar>C:\Users\MARTA\Desktop\Patterns\homework\target\classes</Jar>
+    <AuxClasspathEntry>C:\Users\MARTA\Desktop\Patterns\homework\target\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\MARTA\Desktop\Patterns\homework\target\test-classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\MARTA\.m2\repository\junit\junit\4.12\junit-4.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\MARTA\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\MARTA\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\MARTA\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\MARTA\Desktop\Patterns\homework\src\test\java</SrcDir>
+    <SrcDir>C:\Users\MARTA\Desktop\Patterns\homework\src\main\java</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 9 Dec 2019 20:53:25 +0200" total_classes="5" referenced_classes="24" total_bugs="0" total_size="57" num_packages="1" java_version="1.8.0_181" vm_version="25.181-b13" cpu_seconds="34.06" clock_seconds="341.73" peak_mbytes="805.85" alloc_mbytes="1024.00" gc_seconds="0.56">
+    <PackageStats package="marta.homework" total_bugs="0" total_types="5" total_size="57">
+      <ClassStats class="marta.homework.App" sourceFile="App.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="marta.homework.CreateNewPropFile" sourceFile="CreateNewPropFile.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="marta.homework.CreatePropertFile" sourceFile="CreatePropertFile.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="marta.homework.Loader" sourceFile="Loader.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="marta.homework.SumTest" sourceFile="SumTest.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="4336" invocations="2" avgMicrosecondsPerInvocation="2168070" maxMicrosecondsPerInvocation="3024571" standardDeviationMicrosecondsPerInvocation="856501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1102" invocations="363" avgMicrosecondsPerInvocation="3036" maxMicrosecondsPerInvocation="439325" standardDeviationMicrosecondsPerInvocation="23368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="995" invocations="363" avgMicrosecondsPerInvocation="2741" maxMicrosecondsPerInvocation="81798" standardDeviationMicrosecondsPerInvocation="8611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="475" invocations="80" avgMicrosecondsPerInvocation="5939" maxMicrosecondsPerInvocation="96920" standardDeviationMicrosecondsPerInvocation="17759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="440" invocations="10" avgMicrosecondsPerInvocation="44028" maxMicrosecondsPerInvocation="224612" standardDeviationMicrosecondsPerInvocation="81449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="317" invocations="24" avgMicrosecondsPerInvocation="13212" maxMicrosecondsPerInvocation="100312" standardDeviationMicrosecondsPerInvocation="22834"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="308" invocations="10" avgMicrosecondsPerInvocation="30872" maxMicrosecondsPerInvocation="220307" standardDeviationMicrosecondsPerInvocation="64923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="268" invocations="24" avgMicrosecondsPerInvocation="11208" maxMicrosecondsPerInvocation="62844" standardDeviationMicrosecondsPerInvocation="17853"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="268" invocations="24" avgMicrosecondsPerInvocation="11177" maxMicrosecondsPerInvocation="54289" standardDeviationMicrosecondsPerInvocation="16932"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="258" invocations="13" avgMicrosecondsPerInvocation="19904" maxMicrosecondsPerInvocation="122584" standardDeviationMicrosecondsPerInvocation="35968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="241" invocations="24" avgMicrosecondsPerInvocation="10043" maxMicrosecondsPerInvocation="62147" standardDeviationMicrosecondsPerInvocation="16766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="225" invocations="5" avgMicrosecondsPerInvocation="45043" maxMicrosecondsPerInvocation="221459" standardDeviationMicrosecondsPerInvocation="88213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="219" invocations="10" avgMicrosecondsPerInvocation="21928" maxMicrosecondsPerInvocation="93619" standardDeviationMicrosecondsPerInvocation="35913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="215" invocations="41" avgMicrosecondsPerInvocation="5264" maxMicrosecondsPerInvocation="137457" standardDeviationMicrosecondsPerInvocation="21201"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1575917912203" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
