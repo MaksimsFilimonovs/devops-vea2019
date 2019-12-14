@@ -1,0 +1,6 @@
+mvn clean
+mvn install
+docker build -f Dockerfile -t springpetclinic .
+docker run -p 8080:8080 springpetclinic
+docker-machine ls
+docker ps
